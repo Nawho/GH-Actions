@@ -19,4 +19,4 @@ jobs:
       run: docker build . --file dockerfile --tag nawho/hello:$(date +%s)
 
     - name: Run node project
-      run: npm run dev
+      run: node index.js
