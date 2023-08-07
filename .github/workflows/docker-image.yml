@@ -21,5 +21,8 @@ jobs:
     - name: Run node project
       run: node index.js
 
+    - name: Log in to docker
+      run: docker login -u nawho -p ${{ secrets.DOCKER_KEY }}
+
     - name: Push docker image to dockerhub
       run: docker push nawho/hello:dev
